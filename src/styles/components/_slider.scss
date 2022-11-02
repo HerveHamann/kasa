@@ -1,0 +1,71 @@
+.slider {
+  position: relative;
+  margin: 63px 7% 0 7%;
+  @include mobile() {
+    margin: 31px 7% 0 7%;
+  }
+
+  .displayedimage {
+    width: 100%;
+    margin: auto;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+    @include mobile() {
+      height: 255px;
+      border-radius: 10px;
+    }
+    @include desktop() {
+      height: 815px;
+    }
+  }
+  .arrowleft {
+    position: absolute;
+    top: 166px;
+    left: 23px;
+    cursor: pointer;
+    @include mobile() {
+      top: 120px;
+      left: 6px;
+      width: 11px;
+      height: 20px;
+    }
+    @include desktop() {
+      top: 366px;
+      left: 23px;
+    }
+  }
+  .arrowright {
+    position: absolute;
+    top: 166px;
+    right: 23px;
+    cursor: pointer;
+    @include mobile() {
+      top: 120px;
+      right: 6px;
+      width: 11px;
+      height: 20px;
+    }
+    @include desktop() {
+      top: 366px;
+      right: 23px;
+    }
+  }
+  .slidenumber {
+    position: absolute;
+    top: 357px;
+    left: 50%;
+    font-size: 18px;
+    font-weight: $font-weight-2;
+    color: $color-4;
+    @include mobile() {
+      display: none;
+    }
+    @include desktop() {
+      top: 757px;
+    }
+  }
+  .hide {
+    display: none;
+  }
+}

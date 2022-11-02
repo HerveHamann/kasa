@@ -1,0 +1,44 @@
+.error404containt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-1;
+
+  h1 {
+    padding-top: 175px;
+    font-size: 288px;
+    font-weight: $font-weight-3;
+    @include tablet() {
+      font-size: 96px;
+      padding-top: 200px;
+    }
+  }
+  h2 {
+    padding: 100px 20px 0 20px;
+    font-size: 36px;
+    font-weight: $font-weight-2;
+    @include tablet() {
+      font-size: 18px;
+      padding-top: 0px;
+      text-align: center;
+    }
+    .behide {
+      display: none;
+      @include tablet() {
+        display: block;
+      }
+    }
+  }
+  p {
+    padding: 182px 0 159px 0;
+    color: $color-1;
+    font-size: 18px;
+    font-weight: $font-weight-2;
+    text-decoration: underline;
+
+    @include tablet() {
+      padding: 133px 0 159px 0;
+      font-size: 14px;
+    }
+  }
+}

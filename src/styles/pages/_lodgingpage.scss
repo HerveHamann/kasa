@@ -1,0 +1,93 @@
+.maincontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 7% 0 7%;
+  @include tablet() {
+    margin: 15px 7% 0 7%;
+    flex-direction: column;
+  }
+  .maininfo {
+    h1 {
+      color: $color-1;
+      font-size: 36px;
+      font-weight: $font-weight-2;
+      margin-bottom: 10px;
+      @include mobile() {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    }
+    p {
+      color: $color-1;
+      font-size: 18px;
+      font-weight: $font-weight-2;
+      @include mobile() {
+        font-size: 12px;
+      }
+    }
+    .tagcontainer {
+      display: flex;
+      margin-top: 20px;
+      gap: 10px;
+      @include mobile() {
+        margin-top: 10px;
+      }
+    }
+  }
+  .secondaryinfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    @include mobile() {
+      flex-direction: row-reverse;
+      margin-top: 18px;
+    }
+
+    .hostinfo {
+      display: flex;
+      width: 175px;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-bottom: 24px;
+
+      @include mobile() {
+        margin-bottom: unset;
+        width: 120px;
+      }
+    }
+
+    p {
+      color: $color-1;
+      font-size: 18px;
+      font-weight: $font-weight-2;
+      text-align: right;
+      padding-top: 12px;
+      @include mobile() {
+        font-size: 12px;
+        padding-top: unset;
+        width: 50%;
+      }
+    }
+    .profile {
+      width: 70px;
+      border-radius: 50%;
+      @include mobile() {
+        width: 32px;
+      }
+    }
+  }
+}
+.detailedinfo {
+  height: 296px;
+  margin: 24px 100px 0 100px;
+  display: flex;
+  justify-content: center;
+  gap: 5.3%;
+  @include tablet() {
+    flex-direction: column;
+    margin: 16px 7% 0 7%;
+    height: unset;
+  }
+}

@@ -1,0 +1,9 @@
+.star {
+  margin-left: 10px;
+  cursor: pointer;
+  @include mobile() {
+    width: 15px;
+    margin-left: unset;
+    margin-right: 10px;
+  }
+}
