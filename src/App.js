@@ -26,7 +26,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/kasa">
       <Routes>
         <Route path="/" element={<Home data={data} />} />
         <Route path="/about" element={<About />} />
