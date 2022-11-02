@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import About from "./pages/About";
 import Error404 from "./pages/Error404";
 import Home from "./pages/Home";
@@ -26,13 +26,15 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter basename="/kasa">
-      <Routes>
-        <Route path="/" element={<Home data={data} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/lodgingpage/:id" element={<Lodgingpage data={data} />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+    <BrowserRouter>
+      <HashRouter basename="/">
+        <Routes>
+          <Route path="/" element={<Home data={data} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/lodgingpage/:id" element={<Lodgingpage data={data} />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </HashRouter>
     </BrowserRouter>
   );
 };
