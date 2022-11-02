@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Lodgingpage from "./pages/Lodgingpage";
 
 async function getData() {
-  const res = await fetch("/data.json", {
+  const res = await fetch("./data.json", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
